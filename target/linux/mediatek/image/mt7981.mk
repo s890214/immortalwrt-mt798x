@@ -341,8 +341,9 @@ define Device/cmcc_rax3000m
   DEVICE_MODEL := RAX3000M
   DEVICE_DTS := mt7981-cmcc-rax3000m
   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
-  DEVICE_PACKAGES := automount blkid luci-app-ksmbd ksmbd-utils \
-			luci-app-usb-printer kmod-nls-cp437 kmod-nls-iso8859-1
+  DEVICE_PACKAGES := automount blkid luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils \
+			luci-app-usb-printer luci-i18n-usb-printer-zh-cn \
+			kmod-nls-cp437 kmod-nls-iso8859-1
   SUPPORTED_DEVICES := cmcc,rax3000m
   UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
@@ -388,3 +389,20 @@ define Device/konka_komi-a31
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += konka_komi-a31
+
+define Device/imou_lc-hx3001
+  DEVICE_VENDOR := Imou
+  DEVICE_MODEL := LC-HX3001
+  DEVICE_DTS := mt7981-imou_lc-hx3001
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  SUPPORTED_DEVICES := imou,lc-hx3001
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 114816k
+  KERNEL_IN_UBI := 1
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += imou_lc-hx3001
