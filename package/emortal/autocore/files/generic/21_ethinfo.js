@@ -169,11 +169,12 @@ return baseclass.extend({
   },
 
   render: function (data) {
-    const ethPorts = isDSA ? this.render_dsa(data) : this.render_gsw(data);
-    const gridStyle = `
-      display: grid; grid-gap: 5px 5px;
-      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-      margin-bottom: 1em`;
+  const ethPorts = isDSA ? this.render_dsa(data) : this.render_gsw(data);
+	const gridStyle = `
+	  display: grid; grid-gap: 15px 15px; 
+	  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr)); 
+	  margin-bottom: 1em; 
+	  justify-items: center`; 
     return E('div', { style: gridStyle }, ethPorts);
   }
 });
