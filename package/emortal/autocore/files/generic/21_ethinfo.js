@@ -174,6 +174,7 @@ return baseclass.extend({
       display: grid; grid-gap: 5px 5px;
       grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
       margin-bottom: 1em;
+      padding-bottom: 15px;
       justify-items: center`;
     return E('div', { style: gridStyle }, ethPorts);
   }
