@@ -176,6 +176,5 @@ return baseclass.extend({
       margin-bottom: 1em;
       justify-items: center`;
     return E('div', { style: gridStyle }, ethPorts);
-  }return E('div', { style: gridStyle }, ethPorts);
   }
 });
