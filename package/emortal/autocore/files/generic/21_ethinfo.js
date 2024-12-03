@@ -32,7 +32,7 @@ var callLuciNetworkDevices = rpc.declare({
 var isDSA = false;
 
 const ethStyle = {
-  box: 'max-width: 100px;',
+  box: 'min-width: 90px;',
   head: `
     border-radius: 7px 7px 0 0;
     text-align: center;
