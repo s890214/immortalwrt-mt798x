@@ -133,7 +133,7 @@ return baseclass.extend({
       } else if (label.startsWith('LAN')) {
         stats = netdevs['br-lan'].stats;
         const { tx_bytes, rx_bytes } = link ? stats : txrx;
-        ethPorts.push(portDom(link, duplex, label, speed, tx_bytes, rx_bytes));
+        ethPorts.push(portDom(link, duplex, label, speed, rx_bytes, tx_bytes));
       }
     }
 
