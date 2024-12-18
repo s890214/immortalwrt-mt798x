@@ -135,8 +135,10 @@ function renderPorts(data) {
   const css = {
     grids: `
       display: grid; grid-gap: 5px 10px;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(90px, 190px));
+      justify-content: space-around;
       margin-bottom: 1em;
+      padding-bottom: 15px;
     `,
     head: `
       color: Black;
@@ -148,7 +150,9 @@ function renderPorts(data) {
       border: 1px solid lightgrey;
       border-radius: 0 0 7px 7px;
       display: flex; flex-direction: column;
-      align-items: center; justify-content: center;`,
+      align-items: center;
+      padding-bottom: 3px;
+      justify-content: center;`,
     icon: 'margin: 5px; width: 32px;',
     speed: 'font-size: 0.8rem; font-weight: bold;',
     flow: `
